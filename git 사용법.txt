@@ -1,0 +1,27 @@
+git config --global user.eamil "email"  //깃허브 이메일
+git config -- global user.name "name"  //깃허브 이름
+git config --list  //정보 확인하기
+
+git init  //초기화
+
+git status  //변경점 확인
+
+git rm -r 파일명  //파일 삭제
+
+cd 폴더명  //폴더 이동
+
+git clone 주소값  //깃허브연결
+
+업로드 과정 
+---------------------------
+git add .
+git commit -m "메시지 내용"  //히스토리 만들기
+git push origin 브랜치명
+git remote add origin 주소  //깃허브랑 연결
+---------------------------
+git remote -v  //연결 확인
+git push origin 브랜치명  //업로드
+
+git checkout -b 브랜치명  //브랜치 만들기
+
+git checkout 브랜치명  //브랜치 이동
