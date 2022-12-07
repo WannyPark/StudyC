@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
+void swapchar(char* arr1, char* arr2);
+
 int main(void) {
 	char arr1[30];
 	char arr2[30];
@@ -8,17 +10,17 @@ int main(void) {
 
 	printf("세 단어 입력 : ");
 	scanf("%s %s %s", arr1, arr2, arr3);
-	if (strcmp(arr1, arr2) > 0) swap(arr1, arr2);
-	if (strcmp(arr2, arr3) > 0) swap(arr2, arr3);
-	if (strcmp(arr1, arr2) > 0) swap(arr1, arr2);
+	if (strlen(arr1) < strlen(arr2)) swapchar(arr1, arr2);
+	if (strlen(arr2) < strlen(arr3)) swapchar(arr2, arr3);
+	if (strlen(arr1) < strlen(arr2)) swapchar(arr1, arr2);
 	printf("%s, %s, %s", arr1, arr2, arr3);
 
 	return 0;
 }
 
-void swap(char* parr1, char* parr2) {
+void swapchar(char* arr1, char* arr2) {
 	char arr[30];
-	strcpy(arr, parr1);
-	strcpy(parr1, parr2);
-	strcpy(parr2, arr);
+	strcpy(arr, arr1);
+	strcpy(arr1, arr2);
+	strcpy(arr2, arr);
 }
