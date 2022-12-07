@@ -10,9 +10,9 @@ int main(void) {
 
 	printf("세 단어 입력 : ");
 	scanf("%s %s %s", arr1, arr2, arr3);
-	if (strlen(arr1) < strlen(arr2)) swapchar(arr1, arr2);
-	if (strlen(arr2) < strlen(arr3)) swapchar(arr2, arr3);
-	if (strlen(arr1) < strlen(arr2)) swapchar(arr1, arr2);
+	if (strcmp(arr1, arr2) > 0) swapchar(arr1, arr2);
+	if (strcmp(arr2, arr3) > 0) swapchar(arr2, arr3);
+	if (strcmp(arr1, arr2) > 0) swapchar(arr1, arr2);
 	printf("%s, %s, %s", arr1, arr2, arr3);
 
 	return 0;
